@@ -4,6 +4,11 @@ $Oi: 'OpenSans-Italic';
 $Ol: 'OpenSans-Light';
 $O: 'OpenSans-Regular';
 $Osb: 'OpenSans-SemiBold';
+$Dinb: 'DINPro-CondensedBold';
+$Din: 'DINPro-CondensedRegular';
+$Pb: 'Philosopher-Bold';
+$PN: 'Philosopher';
+$DN: 'DIN Pro Condensed';
 $ON: 'Open Sans';
 
 
@@ -21,13 +26,13 @@ $browser-context: 16; // Default
     //font-size: rem(VAR);
 }
 $dir:'../fonts/';
-$bg-color:#b4eaff;
+$bg-color:rgba(18,74,105,0.35);
 $wt:#fff;
 $bk:#000;
-$accent-color:#3aa2cc;
-$ttl-fz:36px;
+$accent-color:rgba(158,11,15,0.5);
+$ttl-fz:25px;
 $fz: rem(16);
-$btn-color: #cb1436;
+$btn-color: #9e0b0f;
 
 
 @mixin font($fontname, $fweight, $fstyle, $fontfamily){
@@ -40,18 +45,23 @@ $btn-color: #cb1436;
         font-style: $fstyle;
     }
 }
-
+@mixin trans(){
+    transition: all 0.4s;
+}
 @include font($Ob, $bold, $normal, $ON);
 @include font($Oi, $normal, $italic, $ON);
 @include font($Ol, $light, $normal, $ON);
 @include font($O, $normal, $normal, $ON);
 @include font($Osb, $semibold, $normal, $ON);
+@include font($Dinb, $semibold, $normal, $DN);
+@include font($Din, $normal, $normal, $DN);
+@include font($Pb, $bold, $normal, $PN);
 
 
 
 body { 
     font-family: $ON, Tahoma, sans-serif;
-    line-height: 1;
+    line-height: 1.5em;
     background-color: #ffffff;
     height: 100%;
     position: relative;
@@ -75,28 +85,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     h1{
-        font-size: rem(24);
+        font-size: rem(52);
         font-weight: bold;
     }
     h2{
-        font-size: rem(22);
+        font-size: rem(25);
         font-weight: bold;
     }
     h3{
-        font-size: rem(20);
-        font-weight: bold;
-    }
-    h4{
         font-size: rem(18);
-        font-weight: 600;
-    }
-    h5{
-        font-size: rem(16);
-        font-weight: 600;
-    }
-    h6{
-        font-size: rem(14);
-        font-weight: 600;
+        font-weight: bold;
     }
 }
 .btn{
@@ -106,5 +104,124 @@ body {
     button{
         font-size: rem(16);
         font-weight: 600;
+    }
+}
+
+section{
+    &.banner-screen{
+        color:$wt;
+        width: 100%;
+        background:url(../img/bg-1.jpg);
+        min-height: 750px;
+        header{
+            min-height: 80px;
+            background:$accent-color;
+            .logo-block{
+                margin-top: 5px;
+                .logo{
+
+                }
+                .name-company{
+                    margin-left: 25px;
+                    p:first-child{
+                        font-family: $DN;
+                        font-size: 24px;
+                        font-weight: bold;
+                        line-height: 28px;
+                    }
+                    p{
+                        font-family: $DN;
+                        font-size: 22px;
+                        font-weight: 400;
+                        line-height: 23px;
+                    }
+                }
+            }
+            .nav-block{
+                .phone-num{
+                    justify-content: flex-end;
+                    .ph{
+                        a{
+                            color: #ffffff;
+                            font-family: "Open Sans";
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 21px;
+                            @include trans();
+                            &:hover{
+                                color: #c4e4ff;
+                                text-decoration: underline;
+                            }
+                        }
+                        .ico{
+                            margin-right: 8px;
+                        }
+                        
+                    }
+                    .call-back{
+                        a{
+                            color: #aba81d;
+                            font-family: "Open Sans";
+                            font-size: 15px;
+                            font-weight: 600;
+                            line-height: 18px;
+                            border-bottom: 2px dashed #aba81d;
+                            @include trans();
+                            &:hover{
+                                color: #f1ee60;
+                                border-bottom: 2px dashed #f1ee60;
+                            }
+                        }
+                    }
+                    & > div:last-child{
+                        padding-left: 22px;
+                    }
+                    & > div:first-child{
+                        padding-right: 22px;
+                        border-right: 1px solid #9e0b0f;
+                    }
+                }
+                .main-menu{
+                    margin-top: 10px;
+                    nav{
+                        ul{
+                            li{
+                                list-style: none;
+                                margin: 0 22px;
+                                display: inline-block;
+                                @include trans();
+                                a{
+                                    color: #ffffff;
+                                    font-family: "Open Sans";
+                                    line-height: 19px;
+                                }
+                                &:last-child{
+                                    margin: 0;
+                                }
+                                position: relative;
+                                &.active:before{
+                                    position: absolute;
+                                    content: "";
+                                    left: 0;
+                                    right: 0;
+                                    bottom: -10px;
+                                    height: 5px;
+                                    background:#124a6b;
+                                }
+                                &:hover:before{
+                                    position: absolute;
+                                    content: "";
+                                    left: 0;
+                                    right: 0;
+                                    bottom: -10px;
+                                    height: 5px;
+                                    background:#124a6b;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

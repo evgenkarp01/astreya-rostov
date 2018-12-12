@@ -1,0 +1,315 @@
+/* NORMALIZE */
+/* ================================================ */
+html, body, div, span, applet, main, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, main, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Tahoma, sans-serif;
+  line-height: 1;
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+input, textarea {
+  color: #333;
+  outline: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="button"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+td, form {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #000100;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans-Bold.eot") format("eot"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Italic.eot");
+  src: url("../fonts/OpenSans-Italic.eot") format("eot"), url("../fonts/OpenSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans-Light.eot") format("eot"), url("../fonts/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans-Regular.eot") format("eot"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBold.eot");
+  src: url("../fonts/OpenSans-SemiBold.eot") format("eot"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../fonts/DINPro-CondensedBold.eot");
+  src: url("../fonts/DINPro-CondensedBold.eot") format("eot"), url("../fonts/DINPro-CondensedBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../fonts/DINPro-CondensedRegular.eot");
+  src: url("../fonts/DINPro-CondensedRegular.eot") format("eot"), url("../fonts/DINPro-CondensedRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Philosopher";
+  src: url("../fonts/Philosopher-Bold.eot");
+  src: url("../fonts/Philosopher-Bold.eot") format("eot"), url("../fonts/Philosopher-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-family: "Open Sans", Tahoma, sans-serif;
+  line-height: 1.5em;
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ttl {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ttl h1 {
+  font-size: 3.25rem;
+  font-weight: bold;
+}
+.ttl h2 {
+  font-size: 1.5625rem;
+  font-weight: bold;
+}
+.ttl h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.btn {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn button {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+section.banner-screen {
+  color: #fff;
+  width: 100%;
+  background: url(../img/bg-1.jpg);
+  min-height: 750px;
+}
+section.banner-screen header {
+  min-height: 80px;
+  background: rgba(158, 11, 15, 0.5);
+}
+section.banner-screen header .logo-block {
+  margin-top: 5px;
+}
+section.banner-screen header .logo-block .name-company {
+  margin-left: 25px;
+}
+section.banner-screen header .logo-block .name-company p:first-child {
+  font-family: "DIN Pro Condensed";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+}
+section.banner-screen header .logo-block .name-company p {
+  font-family: "DIN Pro Condensed";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 23px;
+}
+section.banner-screen header .nav-block .phone-num {
+  justify-content: flex-end;
+}
+section.banner-screen header .nav-block .phone-num .ph a {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  transition: all 0.4s;
+}
+section.banner-screen header .nav-block .phone-num .ph a:hover {
+  color: #c4e4ff;
+  text-decoration: underline;
+}
+section.banner-screen header .nav-block .phone-num .ph .ico {
+  margin-right: 8px;
+}
+section.banner-screen header .nav-block .phone-num .call-back a {
+  color: #aba81d;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  border-bottom: 2px dashed #aba81d;
+  transition: all 0.4s;
+}
+section.banner-screen header .nav-block .phone-num .call-back a:hover {
+  color: #f1ee60;
+  border-bottom: 2px dashed #f1ee60;
+}
+section.banner-screen header .nav-block .phone-num > div:last-child {
+  padding-left: 22px;
+}
+section.banner-screen header .nav-block .phone-num > div:first-child {
+  padding-right: 22px;
+  border-right: 1px solid #9e0b0f;
+}
+section.banner-screen header .nav-block .main-menu {
+  margin-top: 10px;
+}
+section.banner-screen header .nav-block .main-menu nav ul li {
+  list-style: none;
+  margin: 0 22px;
+  display: inline-block;
+  transition: all 0.4s;
+  position: relative;
+}
+section.banner-screen header .nav-block .main-menu nav ul li a {
+  color: #ffffff;
+  font-family: "Open Sans";
+  line-height: 19px;
+}
+section.banner-screen header .nav-block .main-menu nav ul li:last-child {
+  margin: 0;
+}
+section.banner-screen header .nav-block .main-menu nav ul li.active:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 5px;
+  background: #124a6b;
+}
+section.banner-screen header .nav-block .main-menu nav ul li:hover:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 5px;
+  background: #124a6b;
+}
