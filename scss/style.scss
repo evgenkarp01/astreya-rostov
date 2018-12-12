@@ -1,0 +1,110 @@
+@import "_normalize";
+$Ob: 'OpenSans-Bold';
+$Oi: 'OpenSans-Italic';
+$Ol: 'OpenSans-Light';
+$O: 'OpenSans-Regular';
+$Osb: 'OpenSans-SemiBold';
+$ON: 'Open Sans';
+
+
+$normal: normal;
+$italic: italic;
+$bold: bold;
+$semibold: 600;
+$medium: 500;
+$heavy: 800;
+$black: 900;
+$light: 300;
+$browser-context: 16; // Default
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem;
+    //font-size: rem(VAR);
+}
+$dir:'../fonts/';
+$bg-color:#b4eaff;
+$wt:#fff;
+$bk:#000;
+$accent-color:#3aa2cc;
+$ttl-fz:36px;
+$fz: rem(16);
+$btn-color: #cb1436;
+
+
+@mixin font($fontname, $fweight, $fstyle, $fontfamily){
+    @font-face {
+        font-family: $fontfamily;
+        src: url($dir+$fontname+'.eot');
+        src: url($dir+$fontname+'.eot') format("eot"),
+             url($dir+$fontname+'.ttf') format("truetype");
+        font-weight: $fweight;
+        font-style: $fstyle;
+    }
+}
+
+@include font($Ob, $bold, $normal, $ON);
+@include font($Oi, $normal, $italic, $ON);
+@include font($Ol, $light, $normal, $ON);
+@include font($O, $normal, $normal, $ON);
+@include font($Osb, $semibold, $normal, $ON);
+
+
+
+body { 
+    font-family: $ON, Tahoma, sans-serif;
+    line-height: 1;
+    background-color: #ffffff;
+    height: 100%;
+    position: relative;
+    font-size: $fz;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ttl{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    h1{
+        font-size: rem(24);
+        font-weight: bold;
+    }
+    h2{
+        font-size: rem(22);
+        font-weight: bold;
+    }
+    h3{
+        font-size: rem(20);
+        font-weight: bold;
+    }
+    h4{
+        font-size: rem(18);
+        font-weight: 600;
+    }
+    h5{
+        font-size: rem(16);
+        font-weight: 600;
+    }
+    h6{
+        font-size: rem(14);
+        font-weight: 600;
+    }
+}
+.btn{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    button{
+        font-size: rem(16);
+        font-weight: 600;
+    }
+}
