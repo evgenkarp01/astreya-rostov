@@ -159,6 +159,46 @@ a {
   font-weight: bold;
   font-style: normal;
 }
+input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+input::-moz-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:-moz-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea::-moz-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea:-moz-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+textarea:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
 body {
   font-family: "Open Sans", Tahoma, sans-serif;
   line-height: 1.5em;
@@ -184,7 +224,7 @@ body {
 }
 
 .ttl {
-  text-align: center;
+  text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
@@ -194,11 +234,24 @@ body {
 }
 .ttl h2 {
   font-size: 1.5625rem;
-  font-weight: bold;
+  font-weight: 600;
+  line-height: 1.625rem;
 }
 .ttl h3 {
   font-size: 1.125rem;
   font-weight: bold;
+}
+
+.main-ttl h1 {
+  color: #ffffff;
+  font-family: Philosopher;
+  font-weight: bold;
+  line-height: 55px;
+}
+
+.offer {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .btn {
@@ -207,8 +260,58 @@ body {
   margin-right: auto;
 }
 .btn button {
+  background: #9e0b0f;
+  min-width: 200px;
+  display: inline-block;
+  font-family: 'interstate', monospace;
+  color: #fff;
   font-size: 1rem;
-  font-weight: 600;
+  font-family: "Open Sans";
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  height: 35px;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 0 50px -5px #9e0b0f;
+  transition: box-shadow 6s;
+}
+.btn button:after, .btn button:before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  height: 0;
+  padding-bottom: 200%;
+  background: #7b171a;
+  top: 0;
+  z-index: -1;
+  border-radius: 230px;
+  transition: background 6s, -webkit-transform 2.5s;
+  transition: transform 2.5s, background 6s;
+  transition: transform 2.5s, background 6s, -webkit-transform 2.5s;
+}
+.btn button:after {
+  border-top-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  -webkit-transform: translate3d(-5%, 6em, 0) rotate(-45deg);
+          transform: translate3d(-5%, 6em, 0) rotate(-45deg);
+}
+.btn button:before {
+  border-bottom-right-radius: 40%;
+  border-top-left-radius: 40%;
+  -webkit-transform: translate3d(5%, 6em, 0) rotate(0deg);
+          transform: translate3d(5%, 6em, 0) rotate(0deg);
+}
+.btn button:hover, .btn button:focus {
+  box-shadow: 0 0 50px -5px #3f0406;
+}
+.btn button:hover:before, .btn button:hover:after, .btn button:focus:before, .btn button:focus:after {
+  -webkit-transform: translate3d(0, -5em, 0) rotate(180deg);
+          transform: translate3d(0, -5em, 0) rotate(180deg);
+  background: #7b171a;
 }
 
 section.banner-screen {
@@ -312,4 +415,116 @@ section.banner-screen header .nav-block .main-menu nav ul li:hover:before {
   bottom: -10px;
   height: 5px;
   background: #124a6b;
+}
+section.banner-screen .one-screen-banner .main-ttl {
+  margin-top: 50px;
+}
+section.banner-screen .one-screen-banner .forms-block {
+  margin-top: 60px;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol {
+  width: 50%;
+  min-height: 394px;
+  border-radius: 6px;
+  background-color: rgba(18, 74, 105, 0.35);
+  margin-right: 15px;
+  padding: 35px 56px;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol form {
+  display: flex;
+  flex-direction: column;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol form input {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #124a6b;
+  background-color: #124a6b;
+  margin-bottom: 15px;
+  padding: 0 10px 0 60px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol form textarea {
+  width: 100%;
+  height: 108px;
+  border-radius: 5px;
+  border: 1px solid #124a6b;
+  background-color: #124a6b;
+  margin-bottom: 20px;
+  padding: 5px 10px 0 60px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol form fieldset {
+  position: relative;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol form fieldset span {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol form .form-ttl {
+  margin-bottom: 35px;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol:first-child {
+  margin-right: 15px;
+}
+section.banner-screen .one-screen-banner .forms-block .form-pol:last-child {
+  margin-left: 15px;
+}
+section.banner-screen .one-screen-banner .info-block .orders .desc h2 {
+  font-family: "Open Sans";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 26px;
+  line-height: 1.9rem;
+}
+section.banner-screen .one-screen-banner .info-block .orders .num {
+  font-family: Philosopher;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 64px;
+  width: 159px;
+  height: 62px;
+  border-radius: 7px;
+  background-color: #124a6b;
+  text-align: center;
+}
+section.banner-screen .one-screen-banner .info-block .btn-info {
+  margin-top: 30px;
+}
+section.banner-screen .one-screen-banner .info-block .btn-info .btn button {
+  width: 100%;
+  height: 53px;
+  border-radius: 17px;
+  background-color: #9e0b0f;
+}
+section.banner-screen .one-screen-banner .info-block .btn-info .offer {
+  margin-top: 22px;
+}
+section.banner-screen .one-screen-banner .info-block .btns {
+  margin-top: 60px;
+}
+section.banner-screen .one-screen-banner .info-block .btns .btn-fast button {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 50px -5px #fff;
+}
+section.banner-screen .one-screen-banner .info-block .btns .btn-fast button:after, section.banner-screen .one-screen-banner .info-block .btns .btn-fast button:before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  height: 0;
+  padding-bottom: 200%;
+  background: #d8e9ff;
+  top: 0;
+  z-index: -1;
+  border-radius: 230px;
+  transition: background 6s, -webkit-transform 2.5s;
+  transition: transform 2.5s, background 6s;
+  transition: transform 2.5s, background 6s, -webkit-transform 2.5s;
 }

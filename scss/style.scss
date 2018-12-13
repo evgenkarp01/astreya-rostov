@@ -11,7 +11,6 @@ $PN: 'Philosopher';
 $DN: 'DIN Pro Condensed';
 $ON: 'Open Sans';
 
-
 $normal: normal;
 $italic: italic;
 $bold: bold;
@@ -31,6 +30,7 @@ $wt:#fff;
 $bk:#000;
 $accent-color:rgba(158,11,15,0.5);
 $ttl-fz:25px;
+$input-color:#124a6b;
 $fz: rem(16);
 $btn-color: #9e0b0f;
 
@@ -56,8 +56,38 @@ $btn-color: #9e0b0f;
 @include font($Dinb, $semibold, $normal, $DN);
 @include font($Din, $normal, $normal, $DN);
 @include font($Pb, $bold, $normal, $PN);
-
-
+input::-webkit-input-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+input::-moz-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+input:-moz-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+input:-ms-input-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+textarea::-webkit-input-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+textarea::-moz-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+textarea:-moz-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
+textarea:-ms-input-placeholder {
+  color: $wt;
+  font-size: rem(16);
+}
 
 body { 
     font-family: $ON, Tahoma, sans-serif;
@@ -81,7 +111,7 @@ body {
     margin-right: auto;
 }
 .ttl{
-    text-align: center;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
     h1{
@@ -90,20 +120,86 @@ body {
     }
     h2{
         font-size: rem(25);
-        font-weight: bold;
+        font-weight: 600;
+        line-height: rem(26);
     }
     h3{
         font-size: rem(18);
         font-weight: bold;
     }
 }
+.main-ttl{
+    h1{
+        color: #ffffff;
+        font-family: Philosopher;
+        font-weight: bold;
+        line-height: 55px;
+    }
+}
+.offer{
+    font-size: 14px;
+    line-height: 1.5;
+}
 .btn{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     button{
-        font-size: rem(16);
-        font-weight: 600;
+          background: $btn-color;
+          min-width: 200px;
+          display: inline-block;
+          font-family: 'interstate', monospace;
+          color: $wt;
+          font-size: rem(16);
+          font-family: $ON;
+          border: none;
+          text-align: center;
+          text-decoration: none;
+          position: relative;
+          z-index: 1;
+          height: 35px;
+          border-radius: 17px;
+          overflow: hidden;
+          box-shadow: 0 0 50px -5px $btn-color;
+          transition: box-shadow 6s;
+          
+          &:after,
+          &:before {
+            content: '';
+            position: absolute;
+            left: -50%;
+            right: -50%;
+            height: 0;
+            padding-bottom: 200%;
+            background: #7b171a;
+            top: 0;
+            z-index: -1;
+            border-radius: 230px;
+            transition: transform 2.5s, background 6s;
+          }
+          
+          &:after {
+            border-top-right-radius: 40%;
+            border-bottom-left-radius: 40%;
+            transform: translate3d(-5%,6em,0) rotate(-45deg);
+          }
+          
+          &:before {
+            border-bottom-right-radius: 40%;
+            border-top-left-radius: 40%;
+            transform: translate3d(5%,6em,0) rotate(0deg);
+          }
+          
+          &:hover,
+          &:focus {
+            box-shadow: 0 0 50px -5px darken($btn-color, 20%);
+            
+            &:before,
+            &:after {
+              transform: translate3d(0,-5em,0) rotate(180deg);
+              background: #7b171a;
+            }
+          }
     }
 }
 
@@ -223,5 +319,132 @@ section{
                 }
             }
         }
+        .one-screen-banner{
+            .main-ttl{
+                margin-top: 50px;
+            }
+            .forms-block{
+                margin-top: 60px;
+                .form-pol{
+                    width: 50%;
+                    min-height: 394px;
+                    border-radius: 6px;
+                    background-color: $bg-color;
+                    margin-right: 15px;
+                    padding: 35px 56px;
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        h2{
+
+                        }
+                        input{
+                            width: 100%;
+                            height: 35px;
+                            border-radius: 5px;
+                            border: 1px solid $input-color;
+                            background-color: $input-color;
+                            margin-bottom: 15px;
+                            padding: 0 10px 0 60px;
+                            color: $wt;
+                            font-size: 16px;
+                            font-family: $ON;
+                        }
+                        textarea{
+                            width: 100%;
+                            height: 108px;
+                            border-radius: 5px;
+                            border: 1px solid $input-color;
+                            background-color: $input-color;
+                            margin-bottom: 20px;
+                            padding: 5px 10px 0 60px;
+                            color: $wt;
+                            font-size: 16px;
+                            font-family: $ON;
+                        }
+                        fieldset{
+                            position: relative;
+                            span{
+                                position: absolute;
+                                top: 6px;
+                                left: 20px;
+                            }
+                        }
+                        .form-ttl{
+                            margin-bottom: 35px;
+                        }
+                    }
+                    &:first-child{
+                        margin-right: 15px;
+                    }
+                    &:last-child{
+                        margin-left: 15px;
+                    }
+                }
+            }
+            .info-block{
+                .orders{
+                    .desc{
+                        h2{
+                            font-family: "Open Sans";
+                            font-size: 25px;
+                            font-weight: 600;
+                            line-height: 26px;
+                            line-height: 1.9rem;
+                        }
+                    }
+                    .num{
+                        font-family: Philosopher;
+                        font-size: 61px;
+                        font-weight: 700;
+                        line-height: 64px;
+                        width: 159px;
+                        height: 62px;
+                        border-radius: 7px;
+                        background-color: $input-color;
+                        text-align: center;
+                    }
+                }
+                .btn-info{
+                    margin-top: 30px;
+                    .btn{
+                        button{
+                            width: 100%;
+                            height: 53px;
+                            border-radius: 17px;
+                            background-color: #9e0b0f;
+                        }
+                    }
+                    .offer{
+                        margin-top: 22px;
+                    }
+                }
+                .btns{
+                    margin-top: 60px;
+                    .btn-fast{
+                        button{
+                            background:$wt;
+                            color:$bk;
+                            box-shadow: 0 0 50px -5px $wt;
+                             &:after,
+                              &:before {
+                                content: '';
+                                position: absolute;
+                                left: -50%;
+                                right: -50%;
+                                height: 0;
+                                padding-bottom: 200%;
+                                background: #d8e9ff;
+                                top: 0;
+                                z-index: -1;
+                                border-radius: 230px;
+                                transition: transform 2.5s, background 6s;
+                              }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
