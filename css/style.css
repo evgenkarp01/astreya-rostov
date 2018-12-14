@@ -199,6 +199,10 @@ textarea:-ms-input-placeholder {
   font-size: 1rem;
 }
 
+input:focus, textarea:focus {
+  border-color: #2172a2 !important;
+}
+
 body {
   font-family: "Open Sans", Tahoma, sans-serif;
   line-height: 1.5em;
@@ -239,11 +243,11 @@ body {
 }
 .ttl h3 {
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .main-ttl h1 {
-  color: #ffffff;
+  color: #fff;
   font-family: Philosopher;
   font-weight: bold;
   line-height: 55px;
@@ -312,6 +316,14 @@ body {
   -webkit-transform: translate3d(0, -5em, 0) rotate(180deg);
           transform: translate3d(0, -5em, 0) rotate(180deg);
   background: #7b171a;
+}
+
+.marg-block {
+  margin-top: 76px;
+}
+
+.marg-ttl {
+  margin-top: 50px;
 }
 
 section.banner-screen {
@@ -438,7 +450,7 @@ section.banner-screen .one-screen-banner .forms-block .form-pol form input {
   width: 100%;
   height: 35px;
   border-radius: 5px;
-  border: 1px solid #124a6b;
+  border: 2px solid #124a6b;
   background-color: #124a6b;
   margin-bottom: 15px;
   padding: 0 10px 0 60px;
@@ -450,7 +462,7 @@ section.banner-screen .one-screen-banner .forms-block .form-pol form textarea {
   width: 100%;
   height: 108px;
   border-radius: 5px;
-  border: 1px solid #124a6b;
+  border: 2px solid #124a6b;
   background-color: #124a6b;
   margin-bottom: 20px;
   padding: 5px 10px 0 60px;
@@ -527,4 +539,45 @@ section.banner-screen .one-screen-banner .info-block .btns .btn-fast button:afte
   transition: background 6s, -webkit-transform 2.5s;
   transition: transform 2.5s, background 6s;
   transition: transform 2.5s, background 6s, -webkit-transform 2.5s;
+}
+section.services .service-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+section.services .item {
+  max-width: 395px;
+  min-height: 519px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 14px 30px 14px;
+  text-align: center;
+  padding: 40px 30px;
+}
+section.services .item .ttl {
+  text-align: center;
+}
+section.services .item .list {
+  margin-top: 40px;
+}
+section.services .item .list ul {
+  text-align: left;
+}
+section.services .item .list ul li {
+  font-weight: 300;
+  line-height: 1.5rem;
+  list-style: none;
+  position: relative;
+  margin-left: 33px;
+  margin-bottom: 15px;
+}
+section.services .item .list ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -30px;
+  height: 13px;
+  width: 13px;
+  background: url(../img/mark.png) no-repeat;
 }
