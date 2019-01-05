@@ -11,21 +11,21 @@ use PHPMailer\PHPMailer\Exception;
 
 $mail = new PHPMailer;
 	$sendto   = "evgenkarp01@ya.ru";
-	$usermail = "noreply@bosch-rostov.ru";
-    $mail->setFrom($usermail, 'Обработчик почты motors.bosch-rostov.ru');
-    $mail->addAddress($sendto,'Landing Page Bosch');
-    $mail->addReplyTo($sendto,'Landing Page Bosch');
+	$usermail = "noreply@astreya-rostov.ru";
+    $mail->setFrom($usermail, 'Обработчик почты astreya-rostov.ru');
+    $mail->addAddress($sendto,'Landing Page Astreya');
+    $mail->addReplyTo($sendto,'Landing Page Astreya');
 
 
      $mail->isHTML(true);   
 
 
-		$siteName = "Landing Page Bosch";
-		$siteUrl = "motors.bosch-rostov.ru";
-		$subject  = "Новое сообщение - с сайта motors.bosch-rostov.ru";
+		$siteName = "Landing Page Astreya";
+		$siteUrl = "astreya-rostov.ru";
+		$subject  = "Новое сообщение - с сайта astreya-rostov.ru";
 		$thema = "Модальное окно/сообщение";
 		$resultat = "Мы свяжемся с вами в ближайшее время";
-		$colorBg = '#419CD4';
+		$colorBg = '#873B39';
 
 
 
@@ -65,8 +65,8 @@ $mail = new PHPMailer;
 			$name = trim($name);
             $name = strip_tags($name);
 			$msg .= "<p><strong>Имя клиента:</strong> ".$name."</p>\r\n";
-		}else if(isset($_POST['name_footer'])){
-			$name = htmlspecialchars($_POST['name_footer']);
+		}else if(isset($_POST['nameIndex'])){
+			$name = htmlspecialchars($_POST['nameIndex']);
 			$name = trim($name);
             $name = strip_tags($name);
 			$msg .= "<p><strong>Имя клиента:</strong> ".$name."</p>\r\n";
@@ -77,15 +77,15 @@ $mail = new PHPMailer;
 			$phone = trim($phone);
             $phone = strip_tags($phone);
 			$msg .= "<p><strong>Контактрый телефон:</strong> ".$phone."</p>\r\n";
-		}else if(isset($_POST['phone_footer'])){
-			$phone = htmlspecialchars($_POST['phone_footer']);
+		}else if(isset($_POST['phoneIndex'])){
+			$phone = htmlspecialchars($_POST['phoneIndex']);
 			$phone = trim($phone);
             $phone = strip_tags($phone);
 			$msg .= "<p><strong>Контактрый телефон:</strong> ".$phone."</p>\r\n";
 		}
 
-        if(isset($_POST['message_footer'])){
-			$content  = nl2br($_POST['message_footer']);
+        if(isset($_POST['messageIndex'])){
+			$content  = nl2br($_POST['messageIndex']);
 			$content = strip_tags($content);
 			$content = htmlspecialchars($content);
 			$content = trim($content);

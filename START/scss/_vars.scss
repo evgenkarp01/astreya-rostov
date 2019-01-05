@@ -1,0 +1,40 @@
+$bg-color:#b4eaff;
+$wt:#fff;
+$bk:#000;
+$accent-color:#3aa2cc;
+$ttl-fz:36px;
+$fz: rem(16);
+$btn-color: #cb1436;
+$browser-context: 16; // Default
+$dir:'../fonts/';
+$Ob: 'OpenSans-Bold';
+$Oi: 'OpenSans-Italic';
+$Ol: 'OpenSans-Light';
+$O: 'OpenSans-Regular';
+$Osb: 'OpenSans-SemiBold';
+$ON: 'Open Sans';
+$normal: normal;
+$italic: italic;
+$bold: bold;
+$semibold: 600;
+$medium: 500;
+$heavy: 800;
+$black: 900;
+$light: 300;
+$mt:80px;
+$mb:50px;
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem;
+    //font-size: rem(VAR);
+}
+
+@mixin font($fontname, $fweight, $fstyle, $fontfamily){
+    @font-face {
+        font-family: $fontfamily;
+        src: url($dir+$fontname+'.eot');
+        src: url($dir+$fontname+'.eot') format("eot"),
+             url($dir+$fontname+'.ttf') format("truetype");
+        font-weight: $fweight;
+        font-style: $fstyle;
+    }
+}

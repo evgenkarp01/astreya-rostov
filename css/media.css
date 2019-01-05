@@ -1,0 +1,216 @@
+@media only screen and (max-width: 1300px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  section.services .service-flex {
+    justify-content: center;
+  }
+
+  section.advantages .item {
+    max-width: 564px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  section.stock .stock--ttl {
+    font-size: 2rem;
+  }
+
+  section.stock .stock--desc {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+
+  .go-go-go {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  section.stock .stock--cost {
+    margin-bottom: 12px;
+  }
+
+  section.advantages .item {
+    max-width: 461px;
+  }
+
+  section.banner-screen .one-screen-banner .info-block .btns .btn-fast button {
+    margin: 0 7px;
+  }
+
+  section.banner-screen .one-screen-banner .forms-block .form-pol {
+    padding: 35px 20px;
+  }
+
+  footer .block-oplet:first-child .data .logo span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #no-menu {
+    display: none;
+  }
+
+  #m-flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #menuToggle {
+    display: flex;
+  }
+
+  section.advantages .item {
+    max-width: 100%;
+  }
+
+  section.advantages .item-l {
+    margin-right: 0;
+  }
+
+  section.advantages .item-r {
+    margin-left: 0;
+  }
+
+  section.banner-screen .one-screen-banner .forms-block {
+    flex-direction: column;
+  }
+
+  section.banner-screen .one-screen-banner .forms-block .form-pol {
+    width: 100%;
+  }
+
+  section.banner-screen .one-screen-banner .forms-block .form-pol:first-child {
+    margin-right: 0;
+  }
+
+  section.successful .all-good {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  section.successful .all-good .item {
+    margin: 10px;
+  }
+
+  section.block-progress .circles {
+    display: none;
+  }
+
+  section.stock-two .flex-two-stock {
+    flex-direction: column;
+  }
+
+  section.stock .stock--form {
+    margin: 15px;
+  }
+
+  .map-block {
+    padding-left: 40px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  footer .block-oplet:first-child .main-menu {
+    display: none;
+  }
+
+  section.review .rev .nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section.banner-screen header .nav-block .phone-num > div:last-child {
+    display: none;
+  }
+
+  section.banner-screen header .nav-block .phone-num > div:first-child {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  section.stock .stock--form {
+    min-width: 100%;
+  }
+
+  section.review .rev .slider-rev .item .auhtor {
+    display: none;
+  }
+
+  section.review .rev .slider-rev .item .oplet {
+    margin: 0;
+    padding: 25px;
+  }
+
+  section.contacts .cont {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-block {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .dezu {
+    padding: 20px;
+  }
+
+  .dezu .flex {
+    flex-direction: column;
+  }
+
+  .dezu .dj {
+    margin-bottom: 15px;
+  }
+
+  section.stock .stock--ttl {
+    line-height: 2.2rem;
+  }
+
+  .main-ttl h1 {
+    line-height: 2.3rem;
+    font-size: 2rem;
+  }
+
+  section.banner-screen .one-screen-banner .info-block .orders .desc h2 {
+    font-size: rem(17);
+  }
+
+  section.banner-screen .one-screen-banner .info-block .btns {
+    flex-direction: column;
+  }
+
+  section.banner-screen .one-screen-banner .info-block .btns .btn-fast button {
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  section.banner-screen header .nav-block .phone-num {
+    display: none;
+  }
+
+  section.stock .stock--cost .price {
+    font-size: 2.5rem;
+  }
+
+  section.stock .stock--cost .no-price {
+    font-size: 1.7rem;
+  }
+
+  section.advantages .item-l:before, section.advantages .item-l .step, section.advantages .item-r .step, section.advantages .item-r:before {
+    display: none;
+  }
+
+  section.advantages .item-l p {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  section.advantages .item-r p {
+    margin-right: 0;
+    padding: 0 20px;
+    text-align: left;
+  }
+}
